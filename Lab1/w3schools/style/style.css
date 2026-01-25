@@ -1,0 +1,11 @@
+
+h2 {
+  color: blue;
+  text-align: center;
+}
+
+p {
+  border: 2px solid palevioletred;
+  padding: 30px; /*Inside*/
+  margin: 25px; /*Outside*/
+}

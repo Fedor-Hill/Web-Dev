@@ -1,0 +1,21 @@
+
+body {
+    background-image: url("img/cat.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+#my_link {
+    /* backdrop-filter: blur(10px); */
+    /* background-color: rgb(255 255 255 / 30%); */
+    /* margin-top: 300px; */
+
+    background-color: burlywood;
+    padding: 10px;
+}
+
+.blurBox {
+    backdrop-filter: blur(42px);
+}

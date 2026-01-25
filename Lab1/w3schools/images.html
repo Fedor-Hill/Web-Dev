@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<!-- <head>
+    <link rel="stylesheet" href="style/my_style.css">
+</head> -->
+
+<body>
+    <h1>HTML Image Maps</h1>
+    <p>With HTML image maps, you can create clickable areas on an image.</p>
+    <img src="img/map.jpg" usemap="#meme">
+    <map name="meme">
+        <area shape="rectangle" coords="128,270,340,1023" href="https://en.wikipedia.org/wiki/Giancarlo_Esposito"
+            alt="actor" target="_blank">
+        <area shape="rectangle" coords="388,256, 732, 960"
+            href="https://www.amiami.com/eng/search/list/?s_keywords=Touhou+plush" alt="plushi" target="_blank">
+    </map>
+
+    <h1>HTML "picture" Element</h1>
+    <p>The HTML "picture" element allows you to display different pictures for different devices or screen sizes.
+    </p>
+
+    <picture>
+        <source media="(max-width:1000px)" srcset="img/genshin.png">
+        <source media="(min-width:1100px)" srcset="img/muse_dash.png" style="size: 200 px 200px">
+        <img src="cat.png">
+    </picture>
+
+    <h1>When to use the Picture Element</h1>
+    <p>
+        There are two main purposes for the "picture" element: <br>
+        1. Bandwidth
+
+        If you have a small screen or device, it is not necessary to load a large image file. The browser will use
+        the first <br>
+        source - element with matching attribute values, and ignore any of the following elements. <br>
+        2. Format Support
+
+        Some browsers or devices may not support all image formats. By using the "picture" element, you can add
+            images of all formats, and the browser will use the first format it recognizes, and ignore any of the
+            following elements.
+    </p>
+</body>

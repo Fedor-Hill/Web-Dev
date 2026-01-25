@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style/my_style.css">
+</head>
+
+<body>
+    <h1 id="start">HTML Links</h1>
+    <p>Links are found in nearly all web pages. Links allow users to click their way from page to page.</p>
+
+    <p style="background-color: yellow; padding-top: 10px; padding-bottom:10px;">Note: A link does not have to be text.
+        A link can be an image or any padding: 10px;</p>
+
+    <p>Example</p>
+    <a id="my_link" href="https://www.w3schools.com/">Visit W3Schools.com!</a>
+
+    <div class="blurBox">
+        <p>By default, links will appear as follows in all browsers:</p>
+
+        <ul>
+            <li>An unvisited link is underlined and blue</li>
+            <li>A visited link is underlined and purple</li>
+            <li>An active link is underlined and red</li>
+        </ul>
+    </div>
+
+    <h1>HTML Links - The target Attribute</h1>
+    <div class="blurBox">
+        <p> By default, the linked page will be displayed in the current browser window. To change this, you must
+            specify another target for the link. <br>
+
+            The target attribute specifies where to open the linked document. <br>
+
+            The target attribute can have one of the following values:</p>
+
+        <ul>
+            <li>_self - Default. Opens the document in the same window/tab as it was clicked</li>
+            <li>_blank - Opens the document in a new window or tab</li>
+            <li>_parent - Opens the document in the parent frame</li>
+            <li>_top - Opens the document in the full body of the window</li>
+        </ul>
+    </div>
+
+    <div>
+        <p>Example _blank</p>
+        <a id="my_link" href="https://www.w3schools.com/" target="_blank">Visit W3Schools.com!</a>
+    </div>
+
+    <div class="blurBox">
+        <h1>Absolute URLs vs. Relative URLs</h1>
+        <p>Both examples above are using an absolute URL (a full web address) in the href attribute.
+
+            A local link (a link to a page within the same website) is specified with a relative URL (without the
+            "https://www" part):</p>
+
+        <p>Example</p>
+        <h2>Absolute URLs</h2>
+        <p><a href="https://www.w3.org/">W3C</a></p>
+        <p><a href="https://www.google.com/">Google</a></p>
+
+        <h2>Relative URLs</h2>
+        <p><a href="html_images.asp">HTML Images</a></p>
+        <p><a href="/css/default.asp">CSS Tutorial</a></p>
+    </div>
+
+    <div class="blurBox">
+        <h1>HTML Links - Use an Image as a Link</h1>
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=AM_Z2fl9-XvtO14m" target="_blank">
+            <img src="img/avatar.jpg" alt="HTML tutorial" width="400px" height="400px">
+            <!-- <hr> -->
+            <img src="img/photo_2026-01-25_14-54-28.jpg" width="400px" height="400px">
+        </a>
+    </div>
+
+    <div class="blurBox">
+        <h1>Link to an Email Address</h1>
+        <p>Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send
+            a new email):</p>
+        <a href="mailto:someone@example.com">Send email</a>
+    </div>
+
+    <div class="blurBox">
+        <h1>Button as a Link</h1>
+        <p>To use an HTML button as a link, you have to add some JavaScript code. <br>
+
+            JavaScript allows you to specify what happens at certain events, such as a click of a button:</p>
+
+        <button onclick="document.location='default.asp'">HTML Tutorial</button>
+    </div>
+
+    <div class="blurBox">
+        <h1>Link Titles</h1>
+        <p>The title attribute specifies extra information about an element. The information is most often shown as a
+            tooltip text when the mouse moves over the element.</p>
+        <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+    </div>
+
+    <div class="blurBox">
+        <h1 style="text-align: center; color:deeppink;">HTML Links - Different Colors</h1>
+        <p>By default, a link will appear like this (in all browsers):</p>
+        <ul>
+            <li>An unvisited link is underlined and blue</li>
+            <li>A visited link is underlined and purple</li>
+            <li>An active link is underlined and red</li>
+        </ul>
+    </div>
+
+    <div class="blurBox">
+        <h1>Link Buttons</h1>
+        <p>A link can also be styled as a button, by using CSS:</p>
+        <!-- <style>
+            a:link {
+                color: green;
+                background-color: transparent;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: pink;
+                background-color: transparent;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: red;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+
+            a:active {
+                color: yellow;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+        </style> -->
+        <style>
+            a:link,
+            a:visited {
+                background-color: darkmagenta;
+                color: white;
+                padding: 15px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                border-radius: 18px;
+            }
+
+            a:hover,
+            a:active {
+                background-color: magenta;
+            }
+        </style>
+        <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+    </div>
+
+    <div class="blurBox">
+        <h1 style="text-align: center; color: deeppink">HTML Links - Create Bookmarks</h1>
+        <p>HTML links can be used to create bookmarks, so that readers can jump to specific parts of a web page.</p>
+         <a href="#start">Jump to Start of page</a> 
+    </div>
+
+    <div class="blurBox">
+        <h1 style="text-align: center;color:deeppink">Cat girl below</h1>
+    </div>
+    <br>
+    <p style="margin-bottom: 600px;"></p>
+
+</body>
