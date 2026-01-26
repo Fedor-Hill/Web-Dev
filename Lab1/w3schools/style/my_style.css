@@ -19,3 +19,8 @@ body {
 .blurBox {
     backdrop-filter: blur(42px);
 }
+
+.note {
+    background-color: yellow;
+    color:darkgoldenrod;
+}
