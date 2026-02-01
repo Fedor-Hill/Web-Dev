@@ -1,0 +1,71 @@
+body {
+    background-color: black;
+    color: white
+}
+
+.main-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    /* justify-content: space-between; */
+}
+
+.box {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-login {
+    margin-left: 67px;
+}
+
+.box-login input {
+    height: 36px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    border: 2px solid grey;
+    padding: 5px;
+}
+
+.btn {
+    height: 36px;
+    border-radius: 16px;
+    padding: 5px;
+}
+
+.btn-blue {
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+.text-btn {
+    background: none;
+    border: none;
+    color: white;
+    margin-bottom: 67px;
+}
+
+.flex-item {
+    flex: 25%;
+}
+
+.left-card {
+    justify-items: center;
+    
+    justify-self: center;
+}
+
+@media screen and (max-width: 900px) {
+    .box h1 {
+        text-align: center;
+    }
+    .box-login {
+        margin-top: 42px;
+        margin-left: 67px;
+        margin-right: 67px;
+    }
+}
