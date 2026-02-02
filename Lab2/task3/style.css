@@ -1,0 +1,132 @@
+body {
+    background-color: #ffffff;
+}
+
+.grid-box {
+    display: grid;
+    font-size: 16px;
+    /* background-color: pink; */
+
+    grid-template-areas: 
+    'header header header'
+    'sub-head sub-head sub-head'
+    'btn btn btn'
+    'cardOne cardTwo cardThree'
+    ;
+
+}
+
+
+.head {
+    text-align: center;
+    grid-area: header;
+    font-size: 3.5em;
+    margin-top: 10%;
+    /* background-color: aqua; */
+}
+
+.sub-text {
+    grid-area: sub-head;
+    width: 80%;
+    /* background-color: aqua; */
+    color: grey;
+    text-align: center;
+    font-size: 1em;
+    justify-self: center;
+}
+
+.btn-dark {
+    padding: 15px 30px;
+    font-size: 1em;
+    background-image: linear-gradient(to bottom, grey, black);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-dark:hover {
+    background-color: grey;
+}
+
+.btn-white {
+    padding: 15px 30px;
+    font-size: 1em;
+    border: 1px solid black;
+    /* background-image: linear-gradient(to bottom, grey, black); */
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-white:hover {
+    background-color: grey;
+}
+
+.btn-start {
+    grid-area: btn; 
+    width: 200px;
+    justify-self: center;
+
+}
+
+.card {
+    margin-top: 30%;
+    background-color: #fefefe;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid dark ;
+    border-radius: 16px;
+    height: 100%;
+    width: 250px;
+    padding: 20px;
+    justify-self: center;
+    text-align: center;
+    height: max-content;
+}
+
+
+.card-1 {
+    grid-area: cardOne;
+}
+
+.card-2 {
+    grid-area: cardTwo;
+}
+
+.card-3 {
+    grid-area: cardThree;
+    border: 6px solid #1072e6;
+    border-top: 16px solid #1072e6;
+    /* margin-top: 0px;
+    padding: 0px;
+    margin-left: 10px;
+    margin-right: 10px; */
+}
+
+.card-3 fieldset {
+    background-color: #1072e6;
+    text-align: center;
+}
+
+.card-suggested {
+    background-color: #1072e6;
+    border-radius: 16px;
+    margin-top: 31%;
+    width: 270px;
+    text-align: center;
+    padding: 0px;
+    height: max-content;
+}
+
+.card-description {
+    background-color: #f7f8fa;
+    margin-top: 10px;
+    border-radius: 16px;
+    padding: 12px;
+    text-align: left;
+    height: max-content;
+
+}
+
+
