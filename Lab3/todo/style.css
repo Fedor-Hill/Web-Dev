@@ -2,6 +2,8 @@ body {
     background-image: url("img/book.jpg");
     background-repeat: no-repeat;
     background-position: center top;
+    background-attachment: fixed;
+    background-size: cover, contain;
 }
 
 .toppers {
