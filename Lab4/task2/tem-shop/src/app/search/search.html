@@ -1,0 +1,11 @@
+<div class="middle">
+
+  <p id="whatUwant"> HeLlo WhAt YoU NEEd ? </p>
+  <input type="text" name="search" value="foOd" #searchInputRef  (input)="updateURL()">
+  <button type="button" (click)="fetchData()"> show </button>
+
+  <div *ngIf="data">
+    <h3>Fetched Data:</h3>
+    <pre>{{ data }}</pre> <!-- Display fetched data as JSON -->
+  </div>
+</div>

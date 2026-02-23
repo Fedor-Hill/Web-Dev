@@ -1,0 +1,91 @@
+<audio #bgAudio loop preload="auto">
+  <source src="music/Tem Shop.mp3" type="audio/mpeg">
+</audio>
+
+<div class="main-layout">
+    <aside class="sidebar">
+
+        <button class="action-btn" [class.active-focus]="focusedIndex === 0">
+            @if (focusedIndex === 0) { <img src="icon_heart.png" class="icon" alt="buy"> }
+            <span class="label">Buy</span>
+        </button>
+
+        <button class="action-btn" [class.active-focus]="focusedIndex === 1">
+            @if (focusedIndex === 1) { <img src="icon_heart.png" class="icon" alt="sell"> }
+            <span class="label">Sell</span>
+        </button>
+
+        <button class="action-btn " [class.active-focus]="focusedIndex === 2">
+            @if (focusedIndex === 2) { <img src="icon_heart.png" class="icon" alt="talk"> }
+            <span class="label">Talk</span>
+        </button>
+
+        <button class="action-btn " [class.active-focus]="focusedIndex === 3">
+            @if (focusedIndex === 3) { <img src="icon_heart.png" class="icon" alt="exit"> }
+            <span class="label">Exit</span>
+        </button>
+    </aside>
+
+    @if (currentView === 'buy') {
+    <main class="content-area">
+        <div class="carousel-container" #carousel>
+            @for (product of products; track product.id; let i = $index) {
+            <div class="product-card" [class.active-card]="i === productIndex">
+
+                <div class="image-container">
+                    <img [src]="product.image" [alt]="product.name">
+
+                    <div class="rating-tag">
+                        <span class="star">★</span> {{ product.rating }}
+                    </div>
+                </div>
+
+                <div class="content">
+                    <h3 class="product-name">{{ product.name }}</h3>
+                    <div class="price">{{ product.price | number:'1.0-0' }} ₸</div>
+
+                    <div class="social-share">
+                        <a [href]="'https://wa.me/?text=Привет! Look TATA this!' + product.link"
+                            target="_blank" class="share-btn wa">
+                            <img src="assets/icons/wa.png" alt="WhatsApp">
+                        </a>
+                        <a [href]="'https://t.me/share/url?url=' + product.link + '&text=Look TATA this!'"
+                            target="_blank" class="share-btn tg">
+                            <img src="assets/icons/tg.png" alt="Telegram">
+                        </a>
+                    </div>
+
+                    <a [href]="product.link" target="_blank" class="buy-button" [class.active-btn]="i === productIndex">
+                        Подробнее
+                    </a>
+                </div>
+            </div>
+            } @empty {
+            <div class="empty-state">Товары не найдены</div>
+            }
+        </div>
+    </main>
+    }
+
+    @else if (currentView === 'sell') {
+    <main class="content-area">
+        <app-sell></app-sell>
+
+    </main>
+    }
+    @else if (currentView === 'talk') {
+    <main class="content-area">
+        <h1>hOI! welcom to... da TEM SHOP!!!</h1>
+        <h1>Im TEM!!!</h1>
+
+    </main>
+    }
+    @else if (currentView === 'exit') {
+    <main class="content-area">
+        <p style="text-align: center;color: green;">✌☹✋☠✌ ✋💧 ☹⚐☟</p>
+
+    </main>
+    }
+
+
+</div>

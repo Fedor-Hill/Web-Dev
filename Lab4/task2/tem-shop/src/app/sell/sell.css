@@ -1,0 +1,45 @@
+.video-bounce-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.bouncing-video {
+  position: absolute;
+  width: 220px; 
+  height: auto;
+  border-radius: 12px;
+
+  left: 0;
+  top: 0;
+  animation: 
+    moveX 5.3s linear infinite alternate, 
+    moveY 3.7s linear infinite alternate,
+    pulseSize 4s ease-in-out infinite alternate;
+}
+
+@keyframes moveX {
+  from { 
+    left: 0; 
+  }
+  to { 
+    left: calc(100% - 220px); 
+  }
+}
+
+@keyframes moveY {
+  from { 
+    top: 0; 
+  }
+  to { 
+    top: calc(100% - 170px); 
+  }
+}
+
+@keyframes pulseSize {
+  0% { transform: scale(0.42); }
+  100% { transform: scale(1.1); }
+}

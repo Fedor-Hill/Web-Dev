@@ -40,6 +40,8 @@ body {
     font-family: Lavi;
     font-size: 69px;
     list-style-type: none;
+    display: grid;
+    grid-template: "ideaList ideaList ideaList ideaListRight ideaListRight ideaListRight";
 }
 
 .done .todo-text {

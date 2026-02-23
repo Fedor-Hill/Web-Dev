@@ -1,6 +1,7 @@
 const ideaInput = document.getElementById("ideaInput");
 const btnAdd = document.getElementById("btn-add");
 const ideaList = document.getElementById("ideaList");
+const ideaListR = document.getElementById("ideaListRight");
 
 function createTodoItem(text) {
   const li = document.createElement("li");
@@ -53,3 +54,7 @@ ideaInput.addEventListener("keydown", (e) => {
 ideaList.appendChild(createTodoItem("Slay the Dragon"));
 ideaList.appendChild(createTodoItem("Make a child"));
 ideaList.appendChild(createTodoItem("Become a king"));
+
+ideaListR.appendChild(createTodoItem("Slay the Dragon"));
+ideaListR.appendChild(createTodoItem("Make a child"));
+ideaListR.appendChild(createTodoItem("Become a king"));
